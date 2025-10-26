@@ -1,0 +1,11 @@
+bin/
+obj/
+*.user
+*.vs
+**/.vscode
+**/.idea
+*.db
+*.pdb
+**/TestResults
+**/coverage
+.Dockerfile*

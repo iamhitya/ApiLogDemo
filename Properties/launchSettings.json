@@ -1,0 +1,13 @@
+{
+  "profiles": {
+    "ApiLogDemo": {
+      "commandName": "Project",
+      "launchBrowser": true,
+      "launchUrl": "swagger",
+      "environmentVariables": {
+        "ASPNETCORE_ENVIRONMENT": "Development"
+      },
+      "applicationUrl": "https://localhost:55961;http://localhost:55962"
+    }
+  }
+}

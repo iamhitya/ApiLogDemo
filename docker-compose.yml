@@ -1,0 +1,11 @@
+version: '3.8'
+services:
+  apilogdemo:
+    build: .
+    ports:
+      - "5000:80"
+    environment:
+      - ASPNETCORE_ENVIRONMENT=Production
+    volumes:
+      - ./Data:/app/Data
+      - ./Files:/app/Files
