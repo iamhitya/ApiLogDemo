@@ -7,5 +7,6 @@ namespace ApiLogDemo.Models
         public DateTime Timestamp { get; set; }
         public double RecordCount { get; set; } = 0;
         public double ExecutionTimeMs { get; set; }
+        public int? Version { get; set; }
     }
 }

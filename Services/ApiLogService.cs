@@ -39,7 +39,33 @@ namespace ApiLogDemo.Services
             var logs = ReadLogs();
             if (!string.IsNullOrEmpty(method))
                 logs = logs.Where(l => l.Method.Equals(method, StringComparison.OrdinalIgnoreCase)).ToList();
+
+            AssignVersion(logs);
+
             return logs;
         }
+
+        #region Private Methods
+
+        private void AssignVersion(List<ApiLog> logs)
+        {
+            // Group by RecordCount and assign Version based on order of distinct RecordCount
+            var recordGroups = logs
+                .GroupBy(l => l.RecordCount)
+                .OrderBy(g => g.Key) // ensures consistent version ordering
+                .ToList();
+
+            int version = 1;
+            foreach (var group in recordGroups)
+            {
+                foreach (var log in group)
+                {
+                    log.Version = version;
+                }
+                version++;
+            }
+        }
+
+        #endregion
     }
 }

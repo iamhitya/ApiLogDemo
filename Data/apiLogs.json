@@ -4,69 +4,103 @@
     "Endpoint": "/api/People/seed/10",
     "Timestamp": "2025-10-25T14:43:30.3363369Z",
     "RecordCount": 0,
-    "ExecutionTimeMs": 2.6647
+    "ExecutionTimeMs": 2.6647,
+    "Version": null
   },
   {
     "Method": "GetAll",
     "Endpoint": "/api/People",
     "Timestamp": "2025-10-25T14:43:47.5169534Z",
     "RecordCount": 10,
-    "ExecutionTimeMs": 10.2177
+    "ExecutionTimeMs": 10.2177,
+    "Version": null
   },
   {
     "Method": "Seed",
     "Endpoint": "/api/People/seed/10",
     "Timestamp": "2025-10-25T14:44:01.4015078Z",
     "RecordCount": 0,
-    "ExecutionTimeMs": 9.6908
+    "ExecutionTimeMs": 9.6908,
+    "Version": null
   },
   {
     "Method": "GetAll",
     "Endpoint": "/api/People",
     "Timestamp": "2025-10-25T14:44:04.2729785Z",
     "RecordCount": 20,
-    "ExecutionTimeMs": 10.3714
+    "ExecutionTimeMs": 10.3714,
+    "Version": null
   },
   {
     "Method": "GetAll",
     "Endpoint": "/api/People",
     "Timestamp": "2025-10-26T05:28:46.2379779Z",
     "RecordCount": 20,
-    "ExecutionTimeMs": 324.2338
+    "ExecutionTimeMs": 324.2338,
+    "Version": null
   },
   {
     "Method": "Seed",
     "Endpoint": "/api/People/seed/20",
     "Timestamp": "2025-10-26T06:08:03.6013038Z",
     "RecordCount": 0,
-    "ExecutionTimeMs": 50.8259
+    "ExecutionTimeMs": 50.8259,
+    "Version": null
   },
   {
     "Method": "GetAll",
     "Endpoint": "/api/People",
     "Timestamp": "2025-10-26T06:08:13.0834879Z",
     "RecordCount": 40,
-    "ExecutionTimeMs": 46.567
+    "ExecutionTimeMs": 46.567,
+    "Version": null
   },
   {
     "Method": "Seed",
     "Endpoint": "/api/People/seed/10000",
     "Timestamp": "2025-10-26T06:09:53.0359858Z",
     "RecordCount": 0,
-    "ExecutionTimeMs": 42.8603
+    "ExecutionTimeMs": 42.8603,
+    "Version": null
   },
   {
     "Method": "GetAll",
     "Endpoint": "/api/People",
     "Timestamp": "2025-10-26T06:10:17.3106506Z",
     "RecordCount": 10040,
-    "ExecutionTimeMs": 7054.4248
+    "ExecutionTimeMs": 7054.4248,
+    "Version": null
   },
   {
     "Method": "GetById",
     "Endpoint": "/api/People/1",
     "Timestamp": "2025-10-26T06:11:36.5604367Z",
     "RecordCount": 0,
-    "ExecutionTimeMs": 36.8856
+    "ExecutionTimeMs": 36.8856,
+    "Version": null
+  },
+  {
+    "Method": "Add",
+    "Endpoint": "/api/People",
+    "Timestamp": "2025-10-29T03:13:42.6199666Z",
+    "RecordCount": 1,
+    "ExecutionTimeMs": 174.7983,
+    "Version": null
+  },
+  {
+    "Method": "GetById",
+    "Endpoint": "/api/People/1",
+    "Timestamp": "2025-10-29T03:14:43.0804392Z",
+    "RecordCount": 1,
+    "ExecutionTimeMs": 2637.7109,
+    "Version": null
+  },
+  {
+    "Method": "GetById",
+    "Endpoint": "/api/People/1",
+    "Timestamp": "2025-10-29T03:22:34.4635207Z",
+    "RecordCount": 0,
+    "ExecutionTimeMs": 4170.2578,
+    "Version": null
   }
 ]

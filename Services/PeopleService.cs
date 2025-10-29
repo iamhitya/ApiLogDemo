@@ -36,7 +36,11 @@ namespace ApiLogDemo.Services
 
         public Person? GetById(int id)
         {
-            return ReadFromFile().FirstOrDefault(p => p.Id == id);
+            var person = ReadFromFile().FirstOrDefault(p => p.Id == id);
+            if (person != null)
+                AssignAttachement(person);
+
+            return person;
         }
 
         public void Add(Person person)
@@ -114,6 +118,28 @@ namespace ApiLogDemo.Services
                 {
                     person.Attachement = Array.Empty<byte>();
                 }
+            }
+        }
+
+        private void AssignAttachement(Person person)
+        {
+            var filesDir = Path.Combine(Environment.CurrentDirectory, "Files");
+            var files = Directory.Exists(filesDir) ? Directory.GetFiles(filesDir) : Array.Empty<string>();
+
+            if (files.Length == 0)
+            {
+                person.Attachement = Array.Empty<byte>();
+                return;
+            }
+
+            var file = files[Random.Shared.Next(files.Length)];
+            try
+            {
+                person.Attachement = File.ReadAllBytes(file);
+            }
+            catch
+            {
+                person.Attachement = Array.Empty<byte>();
             }
         }
 
