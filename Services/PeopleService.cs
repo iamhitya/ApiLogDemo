@@ -30,8 +30,20 @@ namespace ApiLogDemo.Services
         public List<Person> GetAll()
         {
             var persons = ReadFromFile();
-            AssignAttachement(persons);
+            //AssignAttachement(persons);
             return persons;
+        }
+
+        public async IAsyncEnumerable<Person> GetAllStreamAsync()
+        {
+            var persons = ReadFromFile();
+
+            foreach (var person in persons)
+            {
+                //AssignAttachement(person);
+                yield return person;
+                await Task.Yield(); // allows async streaming
+            }
         }
 
         public Person? GetById(int id)
